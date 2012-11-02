@@ -109,17 +109,9 @@ public class MainActivity extends Activity {
 				do {
 
 					Message message = new Message();
-					message.messageId = -1;
 					message.messageNumber = cursor.getString(cursor
 							.getColumnIndex("address"));
-
-				
-					message.messageType = cursor.getLong(cursor
-							.getColumnIndex("type"));
-
-					message.messageRead = cursor.getInt(cursor
-							.getColumnIndex("read"));
-					message.messageText = cursor.getString(cursor
+					message.messageContent = cursor.getString(cursor
 							.getColumnIndex("body"));
 					smsInbox.add(message);
 				} while (cursor.moveToPrevious());

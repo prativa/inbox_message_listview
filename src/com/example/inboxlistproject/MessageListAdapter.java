@@ -12,9 +12,6 @@ import android.widget.TextView;
 public class MessageListAdapter extends ArrayAdapter<Message> {
 	private Context ctx;
 	public ArrayList<Message> messageListArray;
-
-	public static boolean isDialogOpen = true;
-
 	public MessageListAdapter(Context context, int textViewResourceId,
 			ArrayList<Message> messageListArray) {
 		super(context, textViewResourceId);
@@ -41,7 +38,7 @@ public class MessageListAdapter extends ArrayAdapter<Message> {
 
 		holder.messageTo.setText(message.messageNumber +" : ");
 
-		holder.messageContent.setText(message.messageText);
+		holder.messageContent.setText(message.messageContent);
 
 		return convertView1;
 	}
